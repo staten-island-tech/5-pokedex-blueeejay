@@ -1,0 +1,55 @@
+
+    
+
+    
+# Create a function that will take the data from the JSON file and you will iterate through the list of pokemon and print each pokemons name.
+""" 
+import json
+pokedex = open("./pokedex.json", encoding="utf8")
+data = json.load(pokedex)
+def list():
+   for index, pokes in enumerate(data):
+        print(index, ":", data[index]["name"]) """
+    
+
+# Add a language choice feature and print the pokemons name based on the user input
+""" import json
+def lala():
+ pokedex = open("./pokedex.json", encoding="utf8")
+ data = json.load(pokedex)
+ lang = input("What language would you like to view the pokemon names in? Choose from English, Japanese, Chinese, or French?:")
+
+ if lang.lower == "french": 
+     for index, pokes in enumerate(data): 
+         print(index, ":", data[index]["name"]['french'])
+ if lang.lower == "chinese": 
+     for index, pokes in enumerate(data): 
+         print(index, ":", data[index]["name"]['chinese'])
+ if lang.lower == "english": 
+     for index, pokes in enumerate(data): 
+         print(index, ":", data[index]["name"]['english'])
+ if lang.lower == "japanese": 
+     for index, pokes in enumerate(data): 
+         print(index, ":", data[index]["name"]['japanese'])
+lala()
+ """
+# Develop a function that creates a new list of pokemon based on the type the user searched for. If no pokemon was found of that type inform the user
+
+import json
+pokedex = open("./pokedex.json", encoding="utf8")
+data = json.load(pokedex)
+def typegetter():
+   typewant = [] 
+   x = 0
+   type = input("What type of pokemon are you looking for?:")
+   for index, mon in (data):
+        if type in data[x]["type"]:
+            typewant.append(data[index]["name"]['english'])
+   x =+ 1 
+   for index, mon in enumerate(typewant):
+        print(index, ":", typewant[index]) 
+typegetter()
+
+#Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
+
+#For Leo/, help me come up with a clever final question, considering maybe showing all moves a pokemon has avaiable based on type

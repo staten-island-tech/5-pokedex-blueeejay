@@ -15,3 +15,5 @@ print(data[0])
 
 #For Leo/, help me come up with a clever final question, considering maybe showing all moves a pokemon has avaiable based on type
 
+for index, pokes in enumerate(pokedex):
+    print(index, ":", json["name"])
