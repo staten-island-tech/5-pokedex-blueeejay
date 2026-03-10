@@ -14,6 +14,3 @@ print(data[0])
 #Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
 
 #For Leo/, help me come up with a clever final question, considering maybe showing all moves a pokemon has avaiable based on type
-
-for index, pokes in enumerate(pokedex):
-    print(index, ":", json["name"])
