@@ -1,0 +1,23 @@
+play_count=0
+def slot(quart_count,mac1,mac2,mac3):
+    while quart_count > 0:
+        mac1 +=1
+        quart_count = quart_count - 1
+        play_count += 1 
+        if mac1 == 35:
+            mac1 == 0
+            quart_count += 30
+        if quart_count > 0:
+            mac2 +=1
+            quart_count = quart_count - 1
+            play_count += 1 
+            if mac2 == 100:
+              mac2 == 0
+              quart_count += 60
+              if quart_count > 0:
+               mac2 +=1
+               quart_count = quart_count - 1
+               play_count += 1 
+               if mac2 == 100:
+                   mac2 == 0
+              quart_count += 60
