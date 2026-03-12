@@ -41,13 +41,16 @@ data = json.load(pokedex)
 def typegetter():
    typewant = [] 
    x = 0
+   y = 0
    type = input("What type of pokemon are you looking for?:")
-   for index, mon in (data):
+   for  mon in (data):
         if type in data[x]["type"]:
-            typewant.append(data[index]["name"]['english'])
-   x =+ 1 
-   for index, mon in enumerate(typewant):
-        print(index, ":", typewant[index]) 
+            typewant.append(data[x]["name"]['english']) 
+        x = x =+ 1 
+   for i in (typewant):
+        print(y, ":", typewant[y]) 
+        y += 1
+
 typegetter()
 
 #Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
