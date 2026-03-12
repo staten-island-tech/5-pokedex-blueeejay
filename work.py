@@ -35,22 +35,33 @@ lala()
  """
 # Develop a function that creates a new list of pokemon based on the type the user searched for. If no pokemon was found of that type inform the user
 
+# import json
+# pokedex = open("./pokedex.json", encoding="utf8")
+# data = json.load(pokedex)
+# def typegetter():
+#    typewant = [] 
+#    x = 0
+#    y = 0
+#    type = input("What type of pokemon are you looking for? Capitalize the first letter:")
+#    for  mon in (data):
+#         if type in data[x]["type"]:
+#             typewant.append(data[x]["name"]['english']) 
+#         x = x =+ 1 
+#    for i in (typewant):
+#         print(y, ":", typewant[y]) 
+#         y += 1
+
+# typegetter()
+
 import json
 pokedex = open("./pokedex.json", encoding="utf8")
 data = json.load(pokedex)
 def typegetter():
-   typewant = [] 
-   x = 0
-   y = 0
-   type = input("What type of pokemon are you looking for?:")
-   for  mon in (data):
-        if type in data[x]["type"]:
-            typewant.append(data[x]["name"]['english']) 
-        x = x =+ 1 
-   for i in (typewant):
-        print(y, ":", typewant[y]) 
-        y += 1
-
+    type = input("What type of pokemon are you looking for? Capitalize the first letter:")
+    for mon in data:
+        for typ in data["type"]:
+            if type in data[type]:
+                print(data[mon]["name"]['english'])
 typegetter()
 
 #Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
