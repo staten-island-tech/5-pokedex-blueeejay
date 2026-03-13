@@ -16,10 +16,10 @@ def slot(quart_count,mac1,mac2,mac3):
               mac2 == 0
               quart_count += 60
         if quart_count > 0:
-               mac3 +=1
-               quart_count = quart_count - 1
-               play_count += 1 
-               if mac3 == 10:
+            mac3 +=1
+            quart_count = quart_count - 1
+            play_count += 1 
+            if mac3 == 10:
                    mac2 == 0
                    quart_count += 9
     print ("She went broke after", play_count, "plays.")
