@@ -64,7 +64,8 @@ def typegetter():
     typewant = []
     mon = 0 # (current mons)
     for index, x in enumerate(typed):
-            print(index, ":", typed[x]["type"]["english"])
+            print(index, ":", typed[x]["type"]['english'])
+            x = x + 1 
     chosen = int(input("Input the number corresponding to the type you are searching for:"))
     for mon in data:
             if chosen in data[mon]["type"]:
