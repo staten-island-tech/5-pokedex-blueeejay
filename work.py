@@ -54,23 +54,24 @@ lala()
 
 import json
 pokedex = open("./pokedex.json", encoding="utf8")
-data = json.load(pokedex)
+datadex = json.load(pokedex)
 typeslist = open("./types.json", encoding="utf8")
 typed = json.load(typeslist)
 
 
 def typegetter():
-    mon = 0
+
     typewant = []
     # mon = 0 # (current mons)
     for index, x in enumerate(typed):
             print(index, ":", typed[index]['english'])
     chosen = int(input("Input the number corresponding to the type you are searching for:"))
     print(chosen)
-    for mon in data:
+    for mon in datadex:
             print(mon)
-            if typed[chosen]['english'] in data[mon]["type"]:
-                print(data["name"]['english'])
+            if typed[chosen]['english'] in datadex[mon]["type"]:
+                print(datadex[mon]["name"]['english'])
+            mon =+ 1
 
     # print(typewant)
 typegetter() 
