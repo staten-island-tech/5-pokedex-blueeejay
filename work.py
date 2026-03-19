@@ -68,7 +68,10 @@ def SEARCH():
     totchar = len(ussearch)
     
     for mon in datadex:
-          if ussearch in (mon["name"]['english']).lower():
-            print(mon["name"]['english']) 
+          if uss in (mon["name"]['english']).lower():
+                if character == ussearch(1):
+                      charcoun += 1
+    if charcoun == totchar:
+          print(mon["name"]['english']) 
 SEARCH()
 #For Leo/, help me come up with a clever final question, considering maybe showing all moves a pokemon has avaiable based on type
