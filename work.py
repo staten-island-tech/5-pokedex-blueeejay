@@ -35,24 +35,7 @@ lala()
  """
  
 # Develop a function that creates a new list of pokemon based on the type the user searched for. If no pokemon was found of that type inform the user
-
-# import json
-# pokedex = open("./pokedex.json", encoding="utf8")
-# data = json.load(pokedex)
-# def typegetter():
-#    typewant = [] 
-#    x = 0
-#    y = 0
-#    type = input("What type of pokemon are you looking for? Capitalize the first letter:")
-#    for  mon in (data):
-#         if type in data[x]["type"]:
-#             typewant.append(data[x]["name"]['english']) 
-#         x = x =+ 1 
-#    for i in (typewant):
-#         print(y, ":", typewant[y]) 
-# #         y += 1
-
-import json
+""" import json
 pokedex = open("./pokedex.json", encoding="utf8")
 datadex = json.load(pokedex)
 typeslist = open("./types.json", encoding="utf8")
@@ -60,31 +43,32 @@ typed = json.load(typeslist)
 
 
 def typegetter():
-
     typewant = []
-    # mon = 0 # (current mons)
+    mon = 0 # (current mons)
     for index, x in enumerate(typed):
             print(index, ":", typed[index]['english'])
     chosen = int(input("Input the number corresponding to the type you are searching for:"))
-    print(chosen)
+    print(typed[chosen]['english'])
+    print("The pokemon of this type are..")
     for mon in datadex:
-            print(mon)
-            if typed[chosen]['english'] in datadex[mon]["type"]:
-                print(datadex[mon]["name"]['english'])
-            mon =+ 1
-
-    # print(typewant)
-typegetter() 
+            if typed[chosen]['english'] in mon["type"]:
+                print(mon["name"]['english'])
+typegetter()   """
 # #Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
-# def search():
-#     charc = 0
-#     x = 0 
-#     ussearch = (input("Enter your search here: "))
-#     totchar = len(ussearch)
-#     for lettah in list(ussearch):
-#         if lettah == list(ussearch[x]):
-#             x += 1 
-#             charc +=1 
-#     if charc 
-        
+import json
+pokedex = open("./pokedex.json", encoding="utf8")
+datadex = json.load(pokedex)
+typeslist = open("./types.json", encoding="utf8")
+typed = json.load(typeslist)
+
+def SEARCH():
+    charcoun = 0 
+    curc = 0 # current character
+    ussearch = (input("Enter your search here: ")).lower()
+    totchar = len(ussearch)
+    
+    for mon in datadex:
+          if ussearch in (mon["name"]['english']).lower():
+            print(mon["name"]['english']) 
+SEARCH()
 #For Leo/, help me come up with a clever final question, considering maybe showing all moves a pokemon has avaiable based on type
